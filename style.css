@@ -2,6 +2,7 @@ body {
     font-family: 'Trebuchet MS', sans-serif;
     margin: 0px;
     padding: 0px;
+    background: #ffffff;
 }
 
 #header {
@@ -23,9 +24,54 @@ body {
 
 #header_text {
     color: white;
-    font-size: 30px;
+    font-size: 60px;
 
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* alright ima be honest here - i have no idea how this works; thanks stack overflow! */
+.fadegradientbottom {
+
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    height:25px;
+
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%, #ffffff 100%); /* W3C */
+
+}
+
+#profile_section {
+    margin-top: 50px;
+    margin-left: 75px;
+    margin-right: 150px;
+}
+
+#profile_pic {
+    float: left;
+    width: 300px;
+    height: 300px;
+    /* border-width: 6px; */
+    /* border-radius: 20px; */
+    /* border-style: solid; */
+    /* border-color: #ffe9a8; */
+}
+
+#profile_header {
+    font-size: 40px;
+}
+
+#profile_color_strip {
+    margin-top: -25px;
+    margin-left: 300px;
+    margin-bottom: 40px;
+    width: 200px; height: 10px;
+    background-color: cornflowerblue;
+}
+
+#profile_text {
+    font-size: 25px;
 }
