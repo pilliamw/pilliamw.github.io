@@ -1,2 +1,2 @@
-# Pilliam's Programming Cafe
-My personal website :)
+# My Personal Website
+Hi there! This is the code behind my personal website at smartynotchy.github.io.
