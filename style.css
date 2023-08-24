@@ -142,3 +142,7 @@ body {
 #links_description {
     font-size: 25px;
 }
+
+.connection_link {
+    color: cornflowerblue;
+}
