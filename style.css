@@ -121,6 +121,41 @@ body {
     font-size: 25px;
 }
 
+.portfolio_project {
+    margin-left: 50px;
+    /* height: 300px; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.portfolio_project_header {
+    font-size: 25px;
+}
+/*
+.portfolio_project_main {
+    
+}
+*/
+.portfolio_project_desc {
+    font-size: 20px;
+    margin-right: 50px;
+}
+
+.portfolio_project_image {
+    float: right;
+    width: 400px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: cornflowerblue;
+}
+/*
+.portfolio_project_link {
+    color: cornflowerblue;
+}
+*/
+
 
 #links_section {
     margin-top: 50px;
@@ -161,6 +196,7 @@ body {
     object-fit: cover;
     overflow: hidden;
     background-position: center bottom;
+    top: 0;
 }
 
 
