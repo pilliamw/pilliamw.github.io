@@ -68,6 +68,8 @@ body {
 #profile_color_strip {
     width: 150px; height: 10px;
     background-color: cornflowerblue;
+    margin-top: -25px;
+    margin-bottom: 40px;
 }
 
 #profile_text {
@@ -87,6 +89,8 @@ body {
 #experience_color_strip {
     width: 200px; height: 10px;
     background-color: cornflowerblue;
+    margin-top: -25px;
+    margin-bottom: 40px;
 }
 
 #experience_text {
@@ -107,6 +111,8 @@ body {
 #portfolio_color_strip {
     width: 200px; height: 10px;
     background-color: cornflowerblue;
+    margin-top: -25px;
+    margin-bottom: 40px;
 }
 
 #portfolio_description {
@@ -151,6 +157,8 @@ body {
 #links_color_strip {
     width: 250px; height: 10px;
     background-color: cornflowerblue;
+    margin-top: -25px;
+    margin-bottom: 40px;
 }
 
 #links_description {
