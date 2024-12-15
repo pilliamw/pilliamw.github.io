@@ -1,6 +1,99 @@
+@font-face {
+    font-family: Renogare;
+    src: url("assets/fonts/Renogare-Regular.otf") format("opentype");
+}
+
 body {
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: 'Renogare', 'Inclusive Sans', 'Trebuchet MS', sans-serif;
     margin: 0px;
     padding: 0px;
-    background: #ffffff;
+    background: #282828;
+}
+
+#header {
+    width: 100vw;
+    height: 250px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header p {
+    text-align: center;
+    color: white;
+
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
+
+    user-select: none;
+}
+
+#header_title {
+    font-size: 50px;
+}
+
+#header_subtitle {
+    margin-top: 10px !important;
+    font-size: 22px;
+}
+
+#header_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    filter: brightness(80%);
+}
+
+#header_gradient {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 40px;
+
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%, #141414 100%);
+}
+
+#temp {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: 'Inclusive Sans', 'Trebuchet MS', sans-serif;
+}
+
+a {
+    color: #0099ff !important;
+}
+
+#temp p {
+    margin-bottom: 0px;
+}
+
+#temp_text3 {
+    font-size: 24px;
+    font-family: 'Renogare', 'Inclusive Sans', 'Trebuchet MS', sans-serif;
+    color: #95dddd;
+}
+
+#temp_title {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Renogare', 'Inclusive Sans', 'Trebuchet MS', sans-serif;
+}
+
+hr {
+    width: 70vw;
+    color: white;
 }
