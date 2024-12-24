@@ -1,18 +1,61 @@
+/* MAIN */
+
 @font-face {
     font-family: Renogare;
     src: url("assets/fonts/Renogare-Regular.otf") format("opentype");
 }
 
 body {
-    font-family: 'Renogare', 'Inclusive Sans', 'Trebuchet MS', sans-serif;
     margin: 0px;
     padding: 0px;
+
     background: #282828;
+    color: white;
+
+    font-family: 'Inclusive Sans', 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* GLOBAL CLASSES */
+
+.celestial {
+    font-family: 'Renogare', 'Inclusive Sans', 'Trebuchet MS', sans-serif;
+}
+
+/* HEADER */
+
+@keyframes header_fadein {
+    0% {
+        opacity: 0%;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+
+.header_anim {
+    opacity: 0%;
+    animation: header_fadein 0.5s ease-out forwards;
+}
+
+@keyframes header_expandout {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: var(--header_mainsep_width);
+    }
 }
 
 #header {
     width: 100vw;
-    height: 250px;
+    height: 100vh;
 
     position: relative;
 
@@ -20,6 +63,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    margin-bottom: 20px;
+}
+
+#header_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    filter: brightness(60%);
+
+    background-color: #282828;
 }
 
 #header p {
@@ -34,24 +93,166 @@ body {
 }
 
 #header_title {
-    font-size: 50px;
+    font-size: 70px;
+}
+
+#header_mainsep {
+    --header_mainsep_width: 700px;
+
+    width: 0px;
+    height: 3px;
+    color: white;
+    background-color: white;
+    border: none;
+
+    z-index: 1;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    animation: header_expandout 0.8s cubic-bezier(0.42, 0, 0.5, 1) forwards;
+    animation-delay: 500ms;
 }
 
 #header_subtitle {
     margin-top: 10px !important;
-    font-size: 22px;
+    font-size: 24px;
+
+    animation-delay: 100ms;
 }
 
-#header_img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#header_quicklinks_title {
+    margin-top: 15vh !important;
+    margin-bottom: 20px !important;
+    font-size: 30px;
 
+    animation-delay: 200ms;
+}
+
+#header_quicklinks {    
+    margin-bottom: 15vh;
+
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    animation-delay: 500ms;
+}
+
+#header_quicklinks button {
+    width: 300px;
+    height: 60px;
+    
+    border: none;
+    border-radius: 15px;
+
+    color: white;
+    font-family: 'Renogare', 'Inclusive Sans', 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+
+    position: relative;
+
+    text-align: left;
+    padding-left: 60px;
+}
+
+#header_quicklinks button svg {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 50%;
+    left: 10px;
 
-    filter: brightness(80%);
+    transform: translateY(-50%);
+}
+
+.header_openinnew {
+    position: absolute;
+    top: 50%;
+    left: auto !important;
+    right: 10px;
+
+    width: 30px !important;
+    height: 30px !important;
+
+    transform: translateY(-50%);
+
+    opacity: 0%;
+    transition: opacity 0.2s ease-out;
+}
+
+#header_quicklinks button:hover .header_openinnew {
+    opacity: 100%;
+
+    transition: opacity 0.2s ease-out;
+}
+
+#header_ql_rapidfire {
+    background-color: #3366ff;
+    transition: background-color 0.2s ease-out;
+
+    animation-delay: 300ms;
+}
+
+#header_ql_rapidfire:hover {
+    background-color: #5577ff;
+    transition: background-color 0.2s ease-out;
+}
+
+#header_ql_rapidfire svg {
+    width: 40px;
+    height: 40px;
+}
+
+#header_ql_lunasim {
+    background-color: #9900ff;
+    transition: background-color 0.2s ease-out;
+
+    animation-delay: 300ms;
+}
+
+#header_ql_lunasim:hover {
+    background-color: #9955ff;
+    transition: background-color 0.2s ease-out;
+}
+
+#header_ql_lunasim svg {
+    width: 40px;
+    height: 40px;
+}
+
+#header_ql_schedule {
+    background-color: #ff5050;
+    transition: background-color 0.2s ease-out;
+
+    animation-delay: 350ms;
+}
+
+#header_ql_schedule:hover {
+    background-color: #ff7575;
+    transition: background-color 0.2s ease-out;
+}
+
+#header_ql_schedule svg {
+    width: 40px;
+    height: 40px;
+}
+
+#header_ql_github {
+    background-color: #000000;
+    transition: background-color 0.2s ease-out;
+
+    animation-delay: 350ms;
+}
+
+#header_ql_github:hover {
+    background-color: #222222;
+    transition: background-color 0.2s ease-out;
+}
+
+#header_ql_github svg {
+    width: 35px;
+    height: 35px;
 }
 
 #header_gradient {
@@ -65,35 +266,64 @@ body {
     background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%, #141414 100%);
 }
 
-#temp {
-    text-align: center;
-    color: white;
-    font-size: 18px;
-    font-family: 'Inclusive Sans', 'Trebuchet MS', sans-serif;
+#header_scrollarrow {
+    position: absolute;
+    bottom: 40px;
+    
+    width: 70px;
+    height: 70px;
+
+    border: none;
+    border-radius: 100px;
+
+    background-color: #00000000;
+    transition: background-color 0.2s ease-out;
+
+    animation-delay: 500ms;
 }
 
-a {
-    color: #0099ff !important;
+#header_scrollarrow svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    transition: transform 0.3s ease-out;
 }
 
-#temp p {
-    margin-bottom: 0px;
+#header_scrollarrow:hover {
+    background-color: #00000055;
+    transition: background-color 0.2s ease-out;
 }
 
-#temp_text3 {
-    font-size: 24px;
-    font-family: 'Renogare', 'Inclusive Sans', 'Trebuchet MS', sans-serif;
-    color: #95dddd;
+#header_scrollarrow:hover svg {
+    transform: translate(-50%, -40%);
+    transition: transform 0.3s ease-out;
 }
 
-#temp_title {
-    font-size: 40px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-family: 'Renogare', 'Inclusive Sans', 'Trebuchet MS', sans-serif;
+/* NAVBAR */
+
+#navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    
+    width: 100vw;
+    height: 100px;
+
+    border: none;
+    border-radius: 0px;
+    background-color: #444444;
+
+    z-index: 1;
 }
 
-hr {
-    width: 70vw;
-    color: white;
+/* CONTENT */
+
+#content {
+    margin-left: 150px;
+    margin-right: 150px;
+    
+    width: calc(100vw - 300px);
+
+    border: 1px solid red;
 }
