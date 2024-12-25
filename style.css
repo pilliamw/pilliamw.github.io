@@ -14,6 +14,29 @@ body {
 
     font-family: 'Inclusive Sans', 'Trebuchet MS', sans-serif;
     text-align: center;
+
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 6px; /* Width of vertical scrollbar */
+    height: 12px; /* Height of horizontal scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #333333; /* Background of the scrollbar track */
+    border-radius: 6px;
+  }
+  
+body::-webkit-scrollbar-thumb {
+    background: #555555; /* Scrollbar thumb (handle) */
+    border-radius: 3px;
+    border: 2px solid #555555; /* Padding around the thumb */
+}
+  
+body::-webkit-scrollbar-thumb:hover {
+    background: #777777; /* Thumb color on hover */
+    border: 2px solid #777777; /* Padding around the thumb */
 }
 
 button {
@@ -63,8 +86,6 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    margin-bottom: 20px;
 }
 
 #header_img {
@@ -320,10 +341,117 @@ button {
 /* CONTENT */
 
 #content {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-top: 5vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
     
-    width: calc(100vw - 300px);
+    width: 90vw;
 
     border: 1px solid red;
+}
+
+
+/* EXPERIENCE */
+
+#c_exp_title {
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+#c_exp_mainsep {
+    width: 300px;
+    height: 2px;
+    color: white;
+    background-color: white;
+    border: none;
+}
+
+#c_exp_projects {
+    margin-top: 60px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+#c_exp_general {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+#c_exp_comps {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.c_expbox {
+    position: relative;
+
+    width: 400px;
+    height: 90px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #333333;
+
+    text-align: left;
+}
+
+.c_expbox_icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    width: 70px;
+    height: 70px;
+    
+    border: none;
+    border-radius: 5px;
+
+    background-color: #202020;
+}
+
+.c_expbox_icon svg {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+
+    width: 56px;
+    height: 56px;
+}
+
+.c_expbox_title {
+    margin: 0px;
+    font-family: 'Renogare', 'Inclusive Sans', 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    position: absolute;
+    top: 8px;
+    left: 90px;
+}
+
+.c_expbox_subtitle {
+    margin: 0px;
+
+    font-size: 16px;
+    color: #aaaaaa;
+
+    position: absolute;
+    top: 38px;
+    left: 90px;
 }
