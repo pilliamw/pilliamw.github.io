@@ -72,7 +72,7 @@ button {
         width: 0px;
     }
     100% {
-        width: var(--header_mainsep_width);
+        width: var(--header_sep_width);
     }
 }
 
@@ -117,8 +117,8 @@ button {
     font-size: 70px;
 }
 
-#header_mainsep {
-    --header_mainsep_width: 700px;
+#header_sep {
+    --header_sep_width: 700px;
 
     width: 0px;
     height: 3px;
@@ -187,7 +187,7 @@ button {
     transform: translateY(-50%);
 }
 
-.header_openinnew {
+.openinnew {
     position: absolute;
     top: 50%;
     left: auto !important;
@@ -202,7 +202,7 @@ button {
     transition: opacity 0.2s ease-out;
 }
 
-#header_quicklinks button:hover .header_openinnew {
+#header_quicklinks button:hover .openinnew {
     opacity: 100%;
 
     transition: opacity 0.2s ease-out;
@@ -341,15 +341,27 @@ button {
 /* CONTENT */
 
 #content {
-    margin-top: 5vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin: 5vw;
     
     width: 90vw;
 
     border: 1px solid red;
 }
 
+/* ABOUT ME */
+
+#c_abt_title {
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+#c_abt_sep {
+    width: 300px;
+    height: 2px;
+    color: white;
+    background-color: white;
+    border: none;
+}
 
 /* EXPERIENCE */
 
@@ -358,7 +370,7 @@ button {
     margin-bottom: 0px;
 }
 
-#c_exp_mainsep {
+#c_exp_sep {
     width: 300px;
     height: 2px;
     color: white;
@@ -454,4 +466,142 @@ button {
     position: absolute;
     top: 38px;
     left: 90px;
+}
+
+/* PORTFOLIO */
+
+#c_port_title {
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+#c_port_sep {
+    width: 300px;
+    height: 2px;
+    color: white;
+    background-color: white;
+    border: none;
+}
+
+/* SILLY */
+
+
+/* CONTACTS */
+
+#c_contact_title {
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+#c_contact_sep {
+    width: 300px;
+    height: 2px;
+    color: white;
+    background-color: white;
+    border: none;
+}
+
+#c_contact_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+
+    gap: 10px;
+}
+
+#c_contact_main button {
+    width: 600px;
+    height: 90px;
+    
+    border: none;
+    border-radius: 15px;
+
+    color: white;
+    font-family: 'Renogare', 'Inclusive Sans', 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+
+    position: relative;
+    
+    text-align: left;
+}
+
+#c_contact_main button svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+
+    width: 50px;
+    height: 50px;
+
+    transform: translateY(-50%);
+}
+
+#c_contact_main button:hover .openinnew {
+    opacity: 100%;
+
+    transition: opacity 0.2s ease-out;
+}
+
+#c_contact_main .c_contactbutton_title {
+    position: absolute;
+    left: 80px;
+    top: 10px;
+    
+    margin: 0px;
+
+    font-size: 24px;
+}
+
+#c_contact_main .c_contactbutton_subtitle {
+    position: absolute;
+    left: 80px;
+    top: 40px;
+
+    margin: 0px;
+
+    font-size: 14px;
+}
+
+#c_contact_main_email {
+    background-color: #ED4245;
+}
+
+#c_contact_main_discord {
+    background-color: #5865F2;
+}
+
+#c_contact_main_github {
+    background-color: #010409;
+}
+
+#c_contact_others {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+
+    gap: 20px;
+}
+
+#c_contact_others button {
+    width: 70px;
+    height: 70px;
+    
+    border: none;
+    border-radius: 15px;
+
+    position: relative;
+}
+
+#c_contact_others button svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+
+    transform: translateY(-50%);
 }
