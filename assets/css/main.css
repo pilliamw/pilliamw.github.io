@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: Renogare;
-    src: url("assets/fonts/Renogare-Regular.otf") format("opentype");
+    src: url("../fonts/Renogare-Regular.otf") format("opentype");
 }
 
 body {
@@ -633,7 +633,7 @@ button {
     height: 100%;
     object-fit: cover;
 
-    border-radius: 50px 50px 0px 0px;
+    border-radius: 47px 47px 0px 0px;
 
     filter: brightness(1);
 
