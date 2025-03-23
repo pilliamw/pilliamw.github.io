@@ -1,6 +1,14 @@
-if (screen.width <= 700) {
-    document.location = "compact.html";
-}
+/* LANDING BG IMAGE */
+
+window.addEventListener("load", function() {
+    const img = document.getElementById("header_img");
+    img.style.opacity = "0"; // Start hidden
+    img.style.transition = "opacity 1s ease-out";
+
+    setTimeout(() => {
+        img.style.opacity = "1";
+    }, 100); // Small delay to ensure transition works
+});
 
 /* HEADER SCROLL BTN */
 

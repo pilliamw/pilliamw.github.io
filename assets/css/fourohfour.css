@@ -90,7 +90,7 @@ main {
     filter: brightness(0.7) blur(3px);
 
     opacity: 0;
-    transition: opacity 0.3s linear;
+    transition: opacity 0.5s linear;
 }
 
 #fourohfour_bg.loaded {
