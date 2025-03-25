@@ -363,6 +363,38 @@ button {
     border: none;
 }
 
+#c_abt_content {
+    margin-top: 80px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+
+    gap: 5vw;
+}
+
+#c_abt_pfp {
+    width: 20vw;
+    height: 20vw;
+
+    padding: 30px;
+    background-color: #333333;
+    border-radius: 20px;
+    border: none;
+
+    box-shadow: 
+    inset 0 0 10px rgba(0, 0, 0, 0.2),  /* Inside shadow */
+    0 0 10px rgba(0, 0, 0, 0.2);       /* Outside shadow */
+}
+
+#c_abt_text {
+    font-size: 24px;
+    text-align: center;
+    width: 40vw;
+}
+
 /* EXPERIENCE */
 
 #c_exp_title {
