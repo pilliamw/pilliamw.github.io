@@ -1,6 +1,6 @@
 @font-face {
     font-family: Renogare;
-    src: url("../fonts/Renogare-Regular.otf") format("opentype");
+    src: url("/assets/fonts/Renogare-Regular.otf") format("opentype");
 }
 
 body {

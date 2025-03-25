@@ -33,7 +33,7 @@ if (time >= 6 && time <= 9) {
 }
 
 const bg = document.getElementById('fourohfour_bg');
-bg.src = `assets/images/404/${bgSource}`;
+bg.src = `/assets/images/404/${bgSource}`;
 
 bg.onload = function() {
     document.getElementById('fourohfour_bg').classList.add('loaded');
