@@ -6,13 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Pilliam W (aka SmartyNotchy)'s personal website!">
 
-    <title>Pilliam W</title>
+    <title>404 - Not Found!</title>
     <link rel="stylesheet" href="/assets/css/fourohfour.css">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
     <link href="https://fonts.googleapis.com/css?family=Inclusive+Sans" rel="stylesheet" type="text/css">
   </head>
   <body>
+    <script>
+      const path = window.location.pathname.replace(/^\//, "");
+
+      const [mainPath, ...restParts] = path.split("/");
+      const extraPath = restParts.join("/");
+
+      if (mainPath != mainPath.toLowerCase()) {
+          window.location.href = `/${mainPath.toLowerCase()}${extraPath ? `/${extraPath}` : ""}`;
+      } else {
+          document.getElementById("fourohfour").style.visibility = "visible";
+      }
+    </script>
     <main>
       <img id="fourohfour_bg">
 

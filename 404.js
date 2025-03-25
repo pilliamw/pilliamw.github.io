@@ -1,6 +1,6 @@
 /* Path Replacement */
 
-const path = window.location.pathname.replace(/^\//, "");
+/*const path = window.location.pathname.replace(/^\//, "");
 
 const [mainPath, ...restParts] = path.split("/");
 const extraPath = restParts.join("/");
@@ -9,7 +9,7 @@ if (mainPath != mainPath.toLowerCase()) {
     window.location.href = `/${mainPath.toLowerCase()}${extraPath ? `/${extraPath}` : ""}`;
 } else {
     document.getElementById("fourohfour").style.visibility = "visible";
-}
+}*/
 
 /* Image Onload */
 
