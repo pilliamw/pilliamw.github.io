@@ -1,0 +1,163 @@
+@font-face {
+    font-family: Renogare;
+    src: url("../fonts/Renogare-Regular.otf") format("opentype");
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+
+    background-color: #282828;
+
+    color: white;
+
+    font-family: 'Inclusive Sans', 'Trebuchet MS', sans-serif;
+    text-align: center;
+
+    overflow-x: hidden;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#fourohfour {
+    width: max(30vw, 400px);
+    padding-left: min(10vw, 50px);
+    padding-right: min(10vw, 50px);
+    padding-top: min(10vw, 50px);
+    padding-bottom: min(10vw, 70px);
+
+    background-color: #282828;
+
+    border: none;
+    border-radius: 30px;
+
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    visibility: none;
+}
+
+#fourohfour hr {
+    color: white;
+}
+
+#fourohfour_title {
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    font-family: 'Renogare', 'Inclusive Sans', 'Trebuchet MS', sans-serif;
+
+    text-decoration: underline;
+    text-underline-offset: 20px;
+}
+
+#fourohfour_desc {
+    font-size: 20px;
+    margin-top: 40px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    margin-bottom: 80px;
+}
+
+#fourohfour_bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    object-fit: cover;
+    z-index: 0;
+
+    filter: brightness(0.7) blur(3px);
+
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+
+#fourohfour_bg.loaded {
+    opacity: 1;
+}
+
+#fourohfour button {
+    width: 80%;
+    height: 60px;
+    
+    border: none;
+    border-radius: 15px;
+
+    color: white;
+    font-family: 'Renogare', 'Inclusive Sans', 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+
+    position: relative;
+
+    text-align: left;
+    padding-left: 60px;
+
+    cursor: pointer;
+
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+    transition: background-color 0.2s ease-out;
+}
+
+#fourohfour button {
+    transition: background-color 0.2s ease-out;
+}
+
+#fourohfour button svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    transform: translateY(-50%);
+}
+
+#btn_rapidfire {
+    display: none;
+    background-color: #3366ff;
+}
+
+#btn_rapidfire:hover {
+    background-color: #5577ff;
+}
+
+#btn_return {
+    display: none;
+    background-color: #0099cc;
+}
+
+#btn_return:hover {
+    background-color: #00aadd;  
+}
+
+#btn_home {
+    background-color: #ff5050;
+}
+
+#btn_home:hover {
+    background-color: #ff7575;
+}
