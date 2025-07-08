@@ -37,19 +37,29 @@ main {
     padding-top: min(10vw, 50px);
     padding-bottom: min(10vw, 70px);
 
-    background-color: #282828;
-
-    border: none;
-    border-radius: 30px;
-
-    z-index: 1;
+    z-index: 2;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    visibility: none;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+
+#fourohfour.loaded {
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+
+#fourohfour_wrapper {
+    z-index: 1;
+
+    background-color: #282828;
+
+    border: none;
+    border-radius: 30px;
 }
 
 #fourohfour hr {
@@ -91,6 +101,7 @@ main {
 
     opacity: 0;
     transition: opacity 0.5s linear;
+    will-change: opacity;
 }
 
 #fourohfour_bg.loaded {
