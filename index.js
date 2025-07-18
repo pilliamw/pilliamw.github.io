@@ -52,7 +52,6 @@ function scrollPortfolio(idx) {
 
     const items = document.querySelectorAll(".c_portbox");
     items.forEach(item => {
-        console.log(item.style.width);
         item.style.transform = `translateX(${-1*idx*(item.offsetWidth+20)}px)`;
     });
 
@@ -63,13 +62,18 @@ function scrollPortfolio(idx) {
     else PORT_RIGHT_BTN.removeAttribute("disabled", "");
 }
 
-buildPortfolioUI();
-scrollPortfolio(0);
+document.addEventListener("DOMContentLoaded", function() {
+    buildPortfolioUI();
+    scrollPortfolio(0);
 
-PORT_LEFT_BTN.onclick = function() {
-    scrollPortfolio(PORT_SCROLL_IDX - 1);
+    PORT_LEFT_BTN.onclick = function() {
+        scrollPortfolio(PORT_SCROLL_IDX - 1);
+    };
+
+    PORT_RIGHT_BTN.onclick = function() { 
+        scrollPortfolio(PORT_SCROLL_IDX + 1);
+    };
+});
+
 };
 
-PORT_RIGHT_BTN.onclick = function() { 
-    scrollPortfolio(PORT_SCROLL_IDX + 1);
-};
