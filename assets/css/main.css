@@ -409,12 +409,12 @@ a:visited {
 
 /* EXPERIENCE */
 
-#c_exp_title {
+#c_cmp_title {
     font-size: 40px;
     margin-bottom: 0px;
 }
 
-#c_exp_sep {
+#c_cmp_sep {
     width: 300px;
     height: 2px;
     color: white;
@@ -422,40 +422,27 @@ a:visited {
     border: none;
 }
 
-#c_exp_projects {
-    margin-top: 60px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    gap: 20px;
+#c_cmp_subtitle {
+    font-size: 22px;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
-#c_exp_general {
-    margin-top: 20px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
+#c_cmp_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
     gap: 20px;
+    
+    max-width: 85vw;
+    
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    justify-content: center;
 }
 
-#c_exp_comps {
-    margin-top: 20px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    gap: 20px;
-}
-
-.c_expbox {
+.c_cmpbox {
     position: relative;
 
     width: 400px;
@@ -467,9 +454,11 @@ a:visited {
     background-color: #333333;
 
     text-align: left;
+
+    justify-self: center;
 }
 
-.c_expbox_icon {
+.c_cmpbox_icon {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -483,7 +472,7 @@ a:visited {
     background-color: #202020;
 }
 
-.c_expbox_icon svg {
+.c_cmpbox_icon svg {
     position: absolute;
     top: 7px;
     left: 7px;
@@ -492,7 +481,7 @@ a:visited {
     height: 56px;
 }
 
-.c_expbox_title {
+.c_cmpbox_title {
     margin: 0px;
     font-family: 'Renogare', 'Inclusive Sans', 'Trebuchet MS', sans-serif;
     font-size: 22px;
@@ -501,7 +490,7 @@ a:visited {
     left: 90px;
 }
 
-.c_expbox_subtitle {
+.c_cmpbox_subtitle {
     margin: 0px;
 
     font-size: 16px;
