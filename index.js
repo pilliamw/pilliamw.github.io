@@ -19,21 +19,35 @@ HEADER_SCROLL_BTN.onclick = function() {
 
 /* NAVBAR HASH STYLING */
 
-function updateNavbar() {
+NAVBAR_HASHMAP = {
+    "#portfolio": "content_portfolio",
+    "#about": "content_aboutme",
+    "#experience": "content_experience",
+    "#fun": "content_fun",
+    "#contact": "content_contacts"
+};
+
+function hashUpdate() {
+    let hash = location.hash;
+    if (!(hash in NAVBAR_HASHMAP)) hash = "#portfolio";
+
     document.querySelectorAll("#navbar a").forEach(el => {
-        if (el.getAttribute("href") === location.hash) {
-            el.classList.add("active");
+        if (el.getAttribute("href") === hash) {
+            el.classList.add("active");   // or whatever class you want
         } else {
             el.classList.remove("active");
         }
     });
-    if (!location.hash || location.hash == "#") {
-        document.getElementById("navbar_a1").classList.add("active");
+
+    for (const key in NAVBAR_HASHMAP) {
+        const cid = NAVBAR_HASHMAP[key];
+        if (hash === key) document.getElementById(cid).classList.add("active");
+        else document.getElementById(cid).classList.remove("active");
     }
 }
 
 window.addEventListener("hashchange", () => {
-    updateNavbar();
+    hashUpdate();
 
     window.scrollTo({
         top: window.innerHeight,
@@ -42,7 +56,7 @@ window.addEventListener("hashchange", () => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", updateNavbar);
+document.addEventListener("DOMContentLoaded", hashUpdate);
 
 /* CODEFORCES API */
 
@@ -78,7 +92,7 @@ const CF_TITLES = {
     "jiangly": "L. Grandmaster"
 }
 
-fetch("https://codeforces.com/api/user.info?handles=SmartyNotchy")
+/*fetch("https://codeforces.com/api/user.info?handles=SmartyNotchy")
 .then(obj => {
     return obj.json();
 }).then(json => {
@@ -95,4 +109,4 @@ fetch("https://codeforces.com/api/user.info?handles=SmartyNotchy")
     document.getElementById("c_cmpbox_cf_icon").style.fill = CF_COLORS["expert"];
     document.getElementById("c_cmpbox_cf_title").innerText = `CF ${CF_TITLES["expert"]} (Jul. 2025)`;
     document.getElementById("c_cmpbox_cf_subtitle").innerHTML = `Peak Rating (Jul. 2025): <span style='font-weight: bold; color: ${CF_COLORS["expert"]}'>1639</span><br>Codeforces API is down :(`;
-})
+})*/

@@ -454,23 +454,35 @@ a:visited {
 #navbar_a5.active { color: #ff66cc; }
 #navbar_a5.active::after { transform: scaleX(1); }
 
-
 /* CONTENT */
 
 #content {
-    margin: 5vw;
-    
+    margin-top: 50px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 100px;
+    padding: 0px;
+
+    min-height: calc(100vh - 270px);
     width: 90vw;
+}
+
+.content_section {
+    display: none;
+}
+
+.content_section.active {
+    display: block;
 }
 
 /* ABOUT ME */
 
-#c_abt_title {
+#abt_title {
     font-size: 40px;
     margin-bottom: 0px;
 }
 
-#c_abt_sep {
+#abt_sep {
     width: min(300px, 80vw);
     height: 2px;
     color: white;
@@ -478,7 +490,7 @@ a:visited {
     border: none;
 }
 
-#c_abt_content {
+#abt_content {
     margin-top: 80px;
 
     display: flex;
@@ -490,7 +502,7 @@ a:visited {
     gap: 5vw;
 }
 
-#c_abt_pfp {
+#abt_pfp {
     width: 20vw;
     height: 20vw;
 
@@ -504,31 +516,31 @@ a:visited {
     0 0 10px rgba(0, 0, 0, 0.2);       /* Outside shadow */
 }
 
-#c_abt_text {
+#abt_text {
     font-size: 22px;
     text-align: left;
     width: 40vw;
 }
 
-#c_abt_text_footer {
+#abt_text_footer {
     font-size: 16px;
 }
 
 @media (max-width: 1024px) {
-    #c_abt_content { 
+    #abt_content { 
         margin-top: 40px;
         flex-direction: column;
         gap: 5vh;
     }
 
-    #c_abt_pfp { display: none; }
+    #abt_pfp { display: none; }
 
-    #c_abt_text {
+    #abt_text {
         font-size: 20px;
         width: 75vw;
     }
 
-    #c_abt_text_footer {
+    #abt_text_footer {
         font-size: 14px;
     }
 }
@@ -899,7 +911,7 @@ a:visited {
 #c_contact_title {
     font-size: 40px;
 
-    margin-top: 120px;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
