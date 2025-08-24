@@ -211,8 +211,8 @@ a:visited {
     left: auto !important;
     right: 10px;
 
-    width: 30px !important;
-    height: 30px !important;
+    width: 30px;
+    height: 30px;
 
     transform: translateY(-50%);
 
@@ -239,8 +239,8 @@ a:visited {
     }
 
     .openinnew {
-        width: 16px !important;
-        height: 16px !important;
+        width: 16px;
+        height: 16px;
         right: 3px;
     }
 }
@@ -908,22 +908,33 @@ a:visited {
 
 /* CONTACTS */
 
-#c_contact_title {
+#cntct_title {
     font-size: 40px;
 
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
-#c_contact_sep {
+#cntct_sep {
     width: 300px;
     height: 2px;
     color: white;
     background-color: white;
     border: none;
+
+    margin-bottom: 40px;
 }
 
-#c_contact_main {
+#cntct_main {
+    font-size: 20px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+@media (max-width: 700px) { #cntct_main { font-size: 18px; }}
+
+
+#cntct_buttons {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -934,96 +945,64 @@ a:visited {
     gap: 10px;
 }
 
-#c_contact_main button {
-    width: 600px;
-    height: 90px;
+#cntct_buttons button {
+    width: 320px;
+    height: 40px;
     
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
 
     color: white;
     font-family: 'Renogare', 'Inclusive Sans', 'Trebuchet MS', sans-serif;
-    font-size: 24px;
+    font-size: 30px;
 
     position: relative;
-    
+
+    padding-left: 45px;
     text-align: left;
 }
 
-#c_contact_main button svg {
+#cntct_buttons button p {
+    margin: 0px;
+    font-size: 18px;
+}
+
+@media (max-width: 520px) { #cntct_buttons button { width: 280px; } #cntct_buttons button p { font-size: 16px; }}
+
+#cntct_buttons button svg {
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: 5px;
 
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 
     transform: translateY(-50%);
 }
 
-#c_contact_main button:hover .openinnew {
+#cntct_buttons button .openinnew {
+    width: 20px;
+    height: 20px;
+}
+
+#cntct_buttons button:hover .openinnew {
     opacity: 100%;
 
     transition: opacity 0.2s ease-out;
 }
 
-#c_contact_main .c_contactbutton_title {
-    position: absolute;
-    left: 80px;
-    top: 10px;
-    
-    margin: 0px;
-
-    font-size: 24px;
-}
-
-#c_contact_main .c_contactbutton_subtitle {
-    position: absolute;
-    left: 80px;
-    top: 40px;
-
-    margin: 0px;
-
-    font-size: 14px;
-}
-
-#c_contact_main_email {
+#cntct_buttons_email {
     background-color: #ED4245;
 }
 
-#c_contact_main_discord {
+#cntct_buttons_discord {
     background-color: #5865F2;
 }
 
-#c_contact_main_github {
+#cntct_buttons_github {
     background-color: #010409;
 }
 
-#c_contact_others {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 50px;
-
-    gap: 20px;
-}
-
-#c_contact_others button {
-    width: 70px;
-    height: 70px;
-    
-    border: none;
-    border-radius: 15px;
-
-    position: relative;
-}
-
-#c_contact_others button svg {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-
-    transform: translateY(-50%);
+#cntct_buttons_linkedin {
+    background-color: #0A66C2;
 }
